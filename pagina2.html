@@ -1,14 +1,115 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>over mij</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        hallo ik ben kyra
-    
-        <ul>
-            <li><a href="index.html"> homepage</a> </li>
-        </ul>
-    </body>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagina 2 - My Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Achtergrond -->
+    <div class="background"></div>
+
+    <!-- Navigatie -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            Welcome to my website
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pagina2.html" class="active">Pagina 2</a>
+        </nav>
+
+        <div class="search-container">
+            <input
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+            >
+
+            <button type="button" aria-label="Search">
+                🔍
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- Pagina 2 -->
+    <main>
+
+        <section class="page-card">
+
+            <span class="small-title">
+                ABOUT THIS WEBSITE
+            </span>
+
+            <h1>Welkom op pagina 2</h1>
+
+            <p class="intro-text">
+                Op deze pagina kun je meer informatie over mijn website,
+                mijn projecten en mijn interesses vinden.
+            </p>
+
+
+            <div class="info-grid">
+
+                <div class="info-box">
+                    <div class="icon">🌱</div>
+
+                    <h2>Over mij</h2>
+
+                    <p>
+                        Hier kun je informatie over jezelf toevoegen.
+                        Vertel bijvoorbeeld wie je bent en wat je leuk vindt.
+                    </p>
+                </div>
+
+
+                <div class="info-box">
+                    <div class="icon">💻</div>
+
+                    <h2>Mijn projecten</h2>
+
+                    <p>
+                        Hier kun je jouw projecten, websites of andere
+                        dingen waar je aan werkt laten zien.
+                    </p>
+                </div>
+
+
+                <div class="info-box">
+                    <div class="icon">⭐</div>
+
+                    <h2>Mijn interesses</h2>
+
+                    <p>
+                        Voeg hier onderwerpen toe die je interessant vindt,
+                        zoals technologie, games, muziek of sport.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <a href="index.html" class="back-button">
+                ← Terug naar home
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
 </html>
