@@ -1,0 +1,332 @@
+/* ================================
+   Algemene instellingen
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   Achtergrond
+================================ */
+
+.background {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+/* Donkere transparante laag voor betere leesbaarheid */
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 40, 20, 0.15);
+
+    z-index: -1;
+}
+
+
+/* ================================
+   Navigatiebalk
+================================ */
+
+.navbar {
+    position: relative;
+
+    width: calc(100% - 50px);
+    margin: 25px auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.18);
+
+    z-index: 10;
+}
+
+
+/* ================================
+   Logo / titel
+================================ */
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ================================
+   Zoekbalk
+================================ */
+
+.search-container {
+    display: flex;
+    align-items: center;
+
+    width: 260px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.search-container:focus-within {
+    background: rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.search-container input {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.search-container button {
+    width: 48px;
+    height: 42px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.search-container button:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================================
+   Hoofdcontent
+================================ */
+
+main {
+    min-height: calc(100vh - 120px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px 80px;
+}
+
+
+/* ================================
+   Introductie kaart
+================================ */
+
+.intro-card {
+    width: min(650px, 90%);
+
+    padding: 50px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.17);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.25);
+
+    animation: fadeIn 1s ease;
+}
+
+
+/* Titel */
+
+.intro-card h1 {
+    margin-bottom: 25px;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Tekst */
+
+.intro-card p {
+    margin-bottom: 18px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.95);
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================
+   Learn More knop
+================================ */
+
+.learn-more {
+    margin-top: 15px;
+
+    padding: 13px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.learn-more:hover {
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================================
+   Animatie
+================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+   Mobiele apparaten
+================================ */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        width: calc(100% - 25px);
+
+        margin: 12px auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+
+        text-align: center;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    main {
+        padding-top: 30px;
+    }
+
+    .intro-card {
+        padding: 35px 25px;
+    }
+
+    .intro-card h1 {
+        font-size: 32px;
+    }
+
+    .intro-card p {
+        font-size: 15px;
+    }
+}
