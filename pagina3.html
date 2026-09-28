@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muziek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Mijn muziek</h1>
+
+    <p>Klik op de afbeelding om de muziek af te spelen!</p>
+
+    <audio id="muziek" src="lofi.mp3"></audio>
+
+    <img
+        id="musicButton"
+        src="Windows media player.jpeg"
+        alt="Muziek afspelen"
+        class="music-player"
+    >
+
+    <script>
+        const musicButton = document.getElementById("musicButton");
+        const muziek = document.getElementById("muziek");
+
+        musicButton.addEventListener("click", function () {
+
+            if (muziek.paused) {
+                muziek.play();
+            } else {
+                muziek.pause();
+            }
+
+        });
+    </script>
+
+</body>
+</html>
