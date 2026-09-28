@@ -1,39 +1,108 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muziek</title>
+
+    <title>My Music</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Mijn muziek</h1>
+    <!-- Achtergrond -->
+    <div class="background"></div>
 
-    <p>Klik op de afbeelding om de muziek af te spelen!</p>
 
-    <audio id="muziek" src="lofi.mp3"></audio>
+    <!-- Navigatie -->
+    <header class="navbar">
 
-    <img
-        id="musicButton"
-        src="Windows media player.jpeg"
-        alt="Muziek afspelen"
-        class="music-player"
-    >
+        <a href="index.html" class="logo">
+            Welcome to my website ୭
+        </a>
 
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pagina2.html">About me</a>
+        </nav>
+
+        <div class="search-container">
+
+            <input
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+            >
+
+            <button type="button" aria-label="Search">
+                🔍
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hoofdcontent -->
+    <main>
+
+        <section class="intro-card music-card">
+
+            <h1>My Music ♫</h1>
+
+            <p>
+                Welcome to my music corner!
+            </p>
+
+            <p>
+                Hier kun je naar mijn favoriete lofi-muziek luisteren
+                terwijl je mijn website bekijkt.
+            </p>
+
+
+            <!-- Muziek -->
+            <audio id="muziek" src="lofi.mp3"></audio>
+
+
+            <!-- Windows Media Player afbeelding -->
+            <img
+                id="musicButton"
+                src="Windows media player.jpeg"
+                alt="Klik om muziek af te spelen"
+                class="music-player"
+            >
+
+
+            <p class="music-text">
+                ✦ Klik op de afbeelding om de muziek af te spelen ✦
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Muziek JavaScript -->
     <script>
+
         const musicButton = document.getElementById("musicButton");
         const muziek = document.getElementById("muziek");
 
         musicButton.addEventListener("click", function () {
+
             if (muziek.paused) {
+
                 muziek.play();
+
             } else {
+
                 muziek.pause();
+
             }
+
         });
+
     </script>
 
 </body>
