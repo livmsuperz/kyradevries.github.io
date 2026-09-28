@@ -967,21 +967,6 @@ footer {
        font-size: 28px;
    }
 }
-.music-player {
-    width: 730px;
-    max-width: 90%;
-    display: block;
-    margin: 50px auto;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    box-shadow: none;
-    transition: transform 0.2s ease;
-}
-
-.music-player:hover {
-    transform: scale(1.02);
-}
 /* =========================
    MUSIC PAGE
    ========================= */
@@ -990,19 +975,12 @@ footer {
     text-align: center;
 }
 
-
-/* Windows Media Player afbeelding */
-
 .music-player {
     display: block;
-
     width: 730px;
     max-width: 100%;
-
     height: auto;
-
     margin: 30px auto;
-
     cursor: pointer;
 
     border: none;
@@ -1011,18 +989,12 @@ footer {
     transition: transform 0.2s ease;
 }
 
-
 .music-player:hover {
     transform: scale(1.02);
 }
 
-
-/* Tekst onder de muziek */
-
 .music-text {
     margin-top: 15px;
-
     font-size: 16px;
-
     text-align: center;
 }
